@@ -1,0 +1,15 @@
+from Arduino import Arduino
+import time
+
+cdsPin=0
+ledPin=13
+
+board = Arduino("9600", port="COM9") #포트변경
+
+while True:
+    cdsValue=board.analogRead(cdsPin)
+    if cdsValue < 500:
+        board.digitalWrite(ledPin, "HIGH")
+    else:
+        board.digitalWrite(ledPin, "LOW")
+    time.sleep(0.01)

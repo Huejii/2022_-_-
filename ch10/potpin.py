@@ -2,10 +2,10 @@ from Arduino import Arduino
 import time
 
 potPin=0
-ledPin=11
+ledPin=13
 
 
-board = Arduino("9600", port="COM7") #포트변경
+board = Arduino("9600", port="COM6")
 board.pinMode(ledPin, "OUTPUT")
 
 

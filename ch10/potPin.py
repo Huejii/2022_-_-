@@ -5,7 +5,7 @@ potPin=0
 ledPin=13
 
 
-board = Arduino("9600", port="COM6")
+board = Arduino("9600", port="COM8")
 board.pinMode(ledPin, "OUTPUT")
 
 

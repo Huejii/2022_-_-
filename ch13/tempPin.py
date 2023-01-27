@@ -3,7 +3,7 @@ import time
 
 tempPin = 0
 
-board = Arduino("9600", port = "COM8")
+board = Arduino("9600", port = "COM9")
 
 while True:
     value = board.analogRead(tempPin)

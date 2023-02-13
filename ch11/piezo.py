@@ -3,11 +3,18 @@ import time
 
 buzzerPin = 9
 
-board = Arduino("9600", port = "COM8")
+board = Arduino("9600", port = "COM10")
 board.pinMode(buzzerPin, "OUTPUT")
 
 while True:
-    board.digitalWrite(buzzerPin, "HIGH")
-    time.sleep(0.001911)
-    board.digitalWrite(buzzerPin, "LOW")
-    time.sleep (0.001911)
+    for i in range(0, 100):
+        board.digitalWrite(buzzerPin, "HIGH")
+        time.sleep(0.001911)
+        board.digitalWrite(buzzerPin, "LOW")
+        time.sleep(0.001911)
+    for i in range(0, 100):
+        board.digitalWrite(buzzerPin, "HIGH")
+        time.sleep(0.000956)
+        board.digitalWrite(buzzerPin, "LOW")
+        time.sleep(0.000956)
+   
